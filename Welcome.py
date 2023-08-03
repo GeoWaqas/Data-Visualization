@@ -11,9 +11,9 @@ for i in os.listdir():
 
 st.write("My Data Visualization Website")
 
-st.multiselect("Select files" , filename_list)
+selection = st.multiselect("Select files" , filename_list)
 
-df = pd.read_csv("Emeishan.csv")
+df = pd.read_csv(selection)
 st.dataframe(df)
 
 el_list = df.columns.tolist() [27:80]
