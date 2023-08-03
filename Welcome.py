@@ -11,7 +11,7 @@ for i in os.listdir():
 
 st.write("My Data Visualization Website")
 
-selection = st.selectbox("Select files" , filename_list)
+selection = st.multiselect("Select files" , filename_list)
 
 df = pd.read_csv(selection)
 st.dataframe(df)
