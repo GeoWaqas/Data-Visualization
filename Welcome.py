@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-from bokeh.plotting import figure, show
-from bokeh.io import output_notebook
 
 filename_list = []
 for i in os.listdir():
