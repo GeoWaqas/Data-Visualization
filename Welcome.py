@@ -7,13 +7,12 @@ for i in os.listdir():
   if i.endswith("csv"):
     filename_list.append(i)
 
-st.write(filename_list)
 
 st.write("My First Website")
 
-st.selectbox("select file", filename_list)
+currentfile = st.selectbox("select file", filename_list)
 
-df = pd.read_csv("Emeishan.csv")
+df = pd.read_csv("currentfile")
 st.dataframe(df)
 
 el_list = df.columns.tolist() [27:80]
