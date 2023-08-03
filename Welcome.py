@@ -13,7 +13,7 @@ st.write("My Data Visualization Website")
 
 selection = st.multiselect("Select files" , filename_list, filename_list[0])
 
-df = pd.read_csv(selection)
+
 st.dataframe(df)
 
 el_list = df.columns.tolist() [27:80]
