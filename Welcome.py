@@ -22,13 +22,19 @@ el_list = df.columns.tolist() [27:80]
 x_axis = st.selectbox("select x elements", el_list)
 y_axis = st.selectbox("select y elements", el_list)
 
-df = pd.read_csv("Bastar Craton.csv")
 
-output_notebook()
+import streamlit as st
+from bokeh.plotting import figure
 
-p= figure(x_axis_label = "x", y_axis_label = "y")
-p.triangle(df["Mg"]/10000, df["Si"]/10000)
-p.circle(df["Al"]/10000, df["Si"]/10000)
-p.square(df["K"]/10000, df["Si"]/10000)
-show(p)
+x = [1, 2, 3, 4, 5]
+y = [6, 7, 2, 4, 5]
+
+p = figure(
+    title='simple line example',
+    x_axis_label='x',
+    y_axis_label='y')
+
+p.line(x, y, legend_label='Trend', line_width=2)
+
+st.bokeh_chart(p, use_container_width=True)
 
