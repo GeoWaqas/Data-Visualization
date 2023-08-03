@@ -27,4 +27,4 @@ df = pd.read_csv("Bastar Craton.csv")
 
 p= figure(x_axis_label = "x", y_axis_label = "y")
 p.triangle(df["Mg"]/10000, df["Si"]/10000)
-show(p)
+st.bokeh_chart(p, use_container_width=True)
