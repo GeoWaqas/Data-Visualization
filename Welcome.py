@@ -21,7 +21,6 @@ x_axis = st.selectbox("select x elements", el_list)
 y_axis = st.selectbox("select y elements", el_list)
 
 
-import streamlit as st
 from bokeh.plotting import figure
 
 x = [1, 2, 3, 4, 5]
