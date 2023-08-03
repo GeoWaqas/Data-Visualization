@@ -17,7 +17,7 @@ df = pd.read_csv("Emeishan.csv")
 st.dataframe(df)
 
 el_list = df.columns.tolist() [27:80]
-x_axis = st.selectbox("select elements", el_list)
-y_axis = st.selectbox("select elements", el_list)
+x_axis = st.selectbox("select x elements", el_list)
+y_axis = st.selectbox("select y elements", el_list)
 
 
