@@ -3,5 +3,5 @@ import pandas as pd
 
 st.write("hello world")
 
-df = pd.read_csv("Bastar Craton.csv")
+df = pd.read_csv("Emeishan.csv")
 st.dataframe(df)
