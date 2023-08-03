@@ -10,8 +10,6 @@ for i in os.listdir():
 
 st.write("My First Website")
 
-st.selectbox("select file", filename_list)
-
 df = pd.read_csv("Emeishan.csv")
 st.dataframe(df)
 
