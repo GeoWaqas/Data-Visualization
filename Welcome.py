@@ -8,7 +8,10 @@ for i in os.listdir():
     filename_list.append(i)
 
 
+
 st.write("My First Website")
+
+st.multiselect("Select files" , filename_list)
 
 df = pd.read_csv("Emeishan.csv")
 st.dataframe(df)
@@ -17,4 +20,4 @@ el_list = df.columns.tolist() [27:80]
 x_axis = st.selectbox("select elements", el_list)
 y_axis = st.selectbox("select elements", el_list)
 
-st.multiselect("Select files" , filename_list)
+
