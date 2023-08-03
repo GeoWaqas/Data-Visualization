@@ -23,6 +23,6 @@ y_axis = st.selectbox("select Y element", el_list)
 from bokeh.plotting import figure
 
 p= figure(x_axis_label = "x", y_axis_label = "y")
-p.triangle((df["x_axis"]/10000), (df["y_axis"]/10000))
+p.triangle((df[x_axis]/10000), (df[y_axis]/10000))
 
 st.bokeh_chart(p, use_container_width=True)
