@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-import matplotlib.pyplot as plt
 
 filename_list = []
 for i in os.listdir():
@@ -18,8 +17,8 @@ df = pd.read_csv(selection)
 st.dataframe(df)
 
 el_list = df.columns.tolist() [27:80]
-x_axis = st.selectbox("select x elements", el_list)
-y_axis = st.selectbox("select y elements", el_list)
+x_axis = st.selectbox("select X element", el_list)
+y_axis = st.selectbox("select Y element", el_list)
 
 
 from bokeh.plotting import figure
