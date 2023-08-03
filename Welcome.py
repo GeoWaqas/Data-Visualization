@@ -19,7 +19,7 @@ st.dataframe(df)
 el_list = df.columns.tolist() [27:80]
 x_axis = st.selectbox("select x elements", el_list)
 y_axis = st.selectbox("select y elements", el_list)
-
+plt.scatter(df["Mg"], df["Si"])
 
 from bokeh.plotting import figure
 
