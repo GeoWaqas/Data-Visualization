@@ -27,6 +27,4 @@ df = pd.read_csv("Bastar Craton.csv")
 
 p= figure(x_axis_label = "x", y_axis_label = "y")
 p.triangle(df["Mg"]/10000, df["Si"]/10000)
-p.circle(df["Al"]/10000, df["Si"]/10000)
-p.square(df["K"]/10000, df["Si"]/10000)
 show(p)
