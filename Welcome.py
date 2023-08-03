@@ -23,15 +23,10 @@ y_axis = st.selectbox("select y elements", el_list)
 
 from bokeh.plotting import figure
 
-x = [1, 2, 3, 4, 5]
-y = [6, 7, 2, 4, 5]
+df = pd.read_csv("Bastar Craton.csv")
 
-p = figure(
-    title='simple line example',
-    x_axis_label='x',
-    y_axis_label='y')
-
-p.line(x, y, legend_label='Trend', line_width=2)
-
-st.bokeh_chart(p, use_container_width=True)
-
+p= figure(x_axis_label = "x", y_axis_label = "y")
+p.triangle(df["Mg"]/10000, df["Si"]/10000)
+p.circle(df["Al"]/10000, df["Si"]/10000)
+p.square(df["K"]/10000, df["Si"]/10000)
+show(p)
