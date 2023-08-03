@@ -10,7 +10,7 @@ for i in os.listdir():
 
 st.write("My First Website")
 
-currentfile = st.selectbox("select file", filename_list)
+st.selectbox("select file", filename_list)
 
 df = pd.read_csv("currentfile")
 st.dataframe(df)
