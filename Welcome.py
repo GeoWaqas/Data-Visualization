@@ -27,7 +27,7 @@ from bokeh.plotting import figure
 p= figure(x_axis_label = x_axis, y_axis_label = y_axis)
 
 for i in df_list:
-  p.circle((df[i][x_axis]/10000), (df[y_axis][i]/10000, legend_label = df_list[i]))
+  p.scatter((df[i][x_axis]/10000), (df[y_axis][i]/10000, legend_label = df_list[i]))
 
 
 st.bokeh_chart(p, use_container_width=True)
