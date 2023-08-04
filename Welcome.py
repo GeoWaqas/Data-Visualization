@@ -13,7 +13,9 @@ st.write("My Data Visualization Website")
 
 selection = st.selectbox("Select files" , filename_list)
 
+df = pd.read_csv(selection)
 
+st.dataframe(df)
 
 el_list = df.columns.tolist() [27:80]
 x_axis = st.selectbox("select X element", el_list)
