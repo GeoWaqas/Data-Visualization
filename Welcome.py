@@ -26,8 +26,6 @@ p= figure(x_axis_label = x_axis, y_axis_label = y_axis)
 
 for i in selection:
   
-  df = pd.read_csv(selection)
-  st.dataframe(df)
   p.triangle((df[x_axis]/10000), (df[y_axis]/10000))
 
 
