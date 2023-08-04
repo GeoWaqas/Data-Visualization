@@ -13,7 +13,7 @@ st.write("My Data Visualization Website")
 
 selection = st.multiselect("Select files" , filename_list, filename_list[0])
 
-df = pd.read_csv(selection)
+df = pd.read_csv(filename_list)
 
 st.dataframe(df)
 
